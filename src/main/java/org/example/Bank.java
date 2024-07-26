@@ -1,11 +1,10 @@
-package BankAccount;
+package org.example;
 
-public class Dewey {
+public class Bank {
     private double balance;
     private String accountHolderName;
 
-
-    public Dewey(String accountHolderName, double balance) {
+    public Bank(String accountHolderName, double balance) {
         this.accountHolderName = accountHolderName;
         this.balance = balance;
     }
@@ -19,7 +18,6 @@ public class Dewey {
         }
     }
 
-    // Withdrawal method
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
@@ -29,15 +27,13 @@ public class Dewey {
         }
     }
 
-    // Method to print account details
     public void printAccountDetails() {
         System.out.println("Account Holder: " + accountHolderName);
         System.out.println("Balance: $" + balance);
     }
 
-    // Overriding the toString() method to print account details
     @Override
     public String toString() {
-        return "Account Holder: " + accountHolderName + ", Balance: $" + balance;
+        return "Account Holder: " + accountHolderName + ", Balance: $" + balance + "\n";
     }
 }
